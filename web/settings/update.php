@@ -85,7 +85,7 @@
 							<div class="form-check">
 								<input class="form-check-input" type="radio" name="releasetrainRadioBtn" id="radioBtnStableold" value="stableold" disabled>
 								<label class="form-check-label vaRow" for="radioBtnStableold">
-									Stableold:
+									Stable old:
 									<span class="mx-1" id="availStableoldVersionSpan" data-version=""></span><span class="spinner-grow spinner-grow-sm" id="availStableoldVersionSpinner"></span>
 									<br>
 								</label>
@@ -183,6 +183,9 @@
 		<script>
 
 			$(document).ready(function(){
+
+				// disable navbar entry for current page
+				$('#navUpdate').addClass('disabled');
 
 				function getVersion(dataURL) {
 					// read dataURL filecontent = releasetrain version and return it
